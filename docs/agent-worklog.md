@@ -25,7 +25,7 @@ Telemetry only; ChatGPT reviews quality and follow-up tasks.
 
 - **Finish timestamp (UTC):** 2026-04-24T21:41:06Z
 - **Elapsed time (approximate):** ~1 minute wall clock from start timestamp to finish timestamp (implementation in single session; not a calendar estimate).
-- **Commits (planned at handoff):** see `git log` on branch `cursor/game-prototype-and-checks-72aa`.
+- **Commits at handoff:** 1 — `de2ea15` (Add reflex-dodge playable prototype and npm run check).
 - **Checks run:**
   - `npm run check` — exit 0; output: `check ok: required files and basic invariants verified`
 - **Checks unavailable / not run:**
