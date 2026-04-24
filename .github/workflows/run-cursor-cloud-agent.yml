@@ -3,7 +3,7 @@ name: Run Cursor Cloud Agent
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: "*/30 * * * *"
 
 permissions:
   issues: write
@@ -64,7 +64,9 @@ jobs:
           - Open a PR if possible.
           - Do not merge to main.
           - Keep the change small.
-          - In the PR body include testing instructions and risks."
+          - In the PR body include testing instructions and risks.
+          - Read docs/agent-rules.md before implementation if it exists.
+          - Create or update docs/agent-worklog.md on your branch with start time, commit notes, finish time, checks run, self-review score, and recommended next workload size."
 
           jq -n \
             --arg prompt "$PROMPT" \
