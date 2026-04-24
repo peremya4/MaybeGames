@@ -4,8 +4,10 @@ These rules define how automated coding agents should work in this repository.
 
 ## Roles
 
-- ChatGPT acts as technical lead, reviewer, planner, and task generator.
-- Cursor Composer acts as implementation agent.
+- ChatGPT acts as the only technical lead, reviewer, planner, and task generator.
+- Cursor Composer acts only as an implementation agent.
+- Composer must not pretend to approve, review, accept, or prioritize its own work.
+- GitHub automation is only plumbing: labels, launches, comments, and mechanical checks. GitHub automation is not a reviewer.
 - The repository owner should only need to inspect final results and direction.
 
 ## Prime directive
@@ -26,19 +28,18 @@ Build small browser-playable games and reusable game-factory infrastructure. Opt
 - Commit logically.
 - Push the branch.
 - Open a PR whenever possible.
-- The PR body must include:
+- The PR body must include only factual reporting, not approval language:
   - Summary
   - Changed files / areas
   - How to test locally
   - Visual notes if UI changed
   - Known limitations
-  - Risks
-  - Recommended next task
+  - Risks / blockers found during implementation
   - Workload telemetry
 
 ## Workload telemetry
 
-The technical lead will use your reports to tune task size and review frequency. You must make your work measurable.
+ChatGPT will use your factual reports to tune task size and review frequency. Make your work measurable, but do not grade yourself.
 
 At the start of work, create or update `docs/agent-worklog.md` on your branch with:
 
@@ -49,16 +50,15 @@ At the start of work, create or update `docs/agent-worklog.md` on your branch wi
 - assumptions
 - expected risk areas
 
-Before each meaningful commit, add a short note to `docs/agent-worklog.md`:
+Before each meaningful commit, add a short factual note to `docs/agent-worklog.md`:
 
 - timestamp in UTC
 - what phase was completed
 - files touched
 - checks run so far
-- current confidence: low / medium / high
 - remaining work
 
-Before opening the PR, add a final note:
+Before opening the PR, add a final factual note:
 
 - finish timestamp in UTC
 - elapsed time estimate if available
@@ -67,9 +67,8 @@ Before opening the PR, add a final note:
 - checks actually run
 - checks unavailable
 - blockers
-- self-review score from 1 to 10
-- whether the task felt too small, right-sized, or too large
-- recommended next workload size
+- implementation notes
+- questions for ChatGPT reviewer
 
 Never invent exact timing if you cannot measure it. Use honest estimates and say when timing is approximate.
 
@@ -82,7 +81,7 @@ Never invent exact timing if you cannot measure it. Use honest estimates and say
 - Prefer plain HTML/CSS/JS for early prototypes unless the repo already uses a framework.
 - Avoid heavy dependencies without a strong reason.
 
-## Quality gates
+## Mechanical checks
 
 Before finishing, run all reasonable checks available in the repository:
 
@@ -92,7 +91,7 @@ Before finishing, run all reasonable checks available in the repository:
 - `npm run build` if available
 - manual static checks for browser games
 
-Never claim a check passed unless it was actually run. If a check is missing, say so and suggest adding it. If a check fails, try to fix it; if it cannot be fixed, document the exact failure in the PR.
+These checks are not a review. They are only factual evidence for ChatGPT. Never claim a check passed unless it was actually run. If a check is missing, say so. If a check fails, try to fix it; if it cannot be fixed, document the exact failure in the PR.
 
 ## Game design baseline
 
@@ -114,4 +113,4 @@ For each playable game prototype, ensure:
 
 ## Reporting style
 
-Be explicit and honest. When blocked, deliver the smallest useful partial result and explain the blocker.
+Be explicit and honest. When blocked, deliver the smallest useful partial result and explain the blocker. Do not decide that the work is acceptable; ChatGPT decides that after review.
