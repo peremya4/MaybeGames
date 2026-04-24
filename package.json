@@ -1,0 +1,10 @@
+{
+  "name": "maybegames",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Small browser-playable game prototypes",
+  "scripts": {
+    "start": "npx --yes serve -l 3000 .",
+    "check": "node scripts/check.mjs"
+  }
+}
