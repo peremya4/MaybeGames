@@ -1,0 +1,11 @@
+{
+  "name": "maybegames",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static shell and games folder for MaybeGames prototypes",
+  "scripts": {
+    "start": "npx --yes serve src -l 5173"
+  },
+  "keywords": ["games", "static", "factory"],
+  "license": "UNLICENSED"
+}
