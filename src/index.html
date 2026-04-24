@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MaybeGames — Game factory</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <p class="eyebrow">MaybeGames</p>
+      <h1>Small game factory</h1>
+      <p class="lede">
+        This repository is a <strong>factory</strong> for tiny, experimental browser games. Each prototype lives in its own
+        folder under <code>games/</code> so new ideas can land without disturbing unrelated work.
+      </p>
+    </header>
+
+    <main class="site-main">
+      <section class="card">
+        <h2>What lives here</h2>
+        <ul>
+          <li><code>src/</code> — this home page and any shared static shell.</li>
+          <li><code>games/&lt;game-slug&gt;/</code> — one self-contained game per folder.</li>
+          <li><code>docs/</code> — how we work (including the AI pipeline).</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Next steps</h2>
+        <p>
+          Open <code>src/index.html</code> locally or run <code>npm start</code> for a simple static server. When you add a
+          game, follow the convention in <code>games/README.md</code>.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Plain HTML, CSS, and JavaScript — no backend required for the shell.</p>
+    </footer>
+
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
