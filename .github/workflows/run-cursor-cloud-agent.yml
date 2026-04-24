@@ -3,7 +3,7 @@ name: Run Cursor Cloud Agent
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "*/20 * * * *"
 
 permissions:
   issues: write
@@ -63,10 +63,11 @@ jobs:
           - Create a new branch.
           - Open a PR if possible.
           - Do not merge to main.
-          - Keep the change small.
-          - In the PR body include testing instructions and risks.
+          - Keep the change focused.
+          - In the PR body include factual testing instructions and risks/blockers.
           - Read docs/agent-rules.md before implementation if it exists.
-          - Create or update docs/agent-worklog.md on your branch with start time, commit notes, finish time, checks run, self-review score, and recommended next workload size."
+          - Create or update docs/agent-worklog.md on your branch with start time, commit notes, finish time, checks run, checks unavailable, blockers, implementation notes, and questions for ChatGPT reviewer.
+          - Do not self-review, approve, grade, prioritize, or recommend next workload size. ChatGPT is the only reviewer and task planner."
 
           jq -n \
             --arg prompt "$PROMPT" \
