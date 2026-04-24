@@ -34,6 +34,44 @@ Build small browser-playable games and reusable game-factory infrastructure. Opt
   - Known limitations
   - Risks
   - Recommended next task
+  - Workload telemetry
+
+## Workload telemetry
+
+The technical lead will use your reports to tune task size and review frequency. You must make your work measurable.
+
+At the start of work, create or update `docs/agent-worklog.md` on your branch with:
+
+- issue number and title
+- planned scope size: XS / S / M / L / XL
+- planned phases
+- start timestamp in UTC
+- assumptions
+- expected risk areas
+
+Before each meaningful commit, add a short note to `docs/agent-worklog.md`:
+
+- timestamp in UTC
+- what phase was completed
+- files touched
+- checks run so far
+- current confidence: low / medium / high
+- remaining work
+
+Before opening the PR, add a final note:
+
+- finish timestamp in UTC
+- elapsed time estimate if available
+- number of commits
+- files changed
+- checks actually run
+- checks unavailable
+- blockers
+- self-review score from 1 to 10
+- whether the task felt too small, right-sized, or too large
+- recommended next workload size
+
+Never invent exact timing if you cannot measure it. Use honest estimates and say when timing is approximate.
 
 ## Scope control
 
